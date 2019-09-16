@@ -1,0 +1,162 @@
+<div id='product-component-1568175563611'></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+(function () {
+var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+if (window.ShopifyBuy) {
+if (window.ShopifyBuy.UI) {
+ShopifyBuyInit();
+} else {
+loadScript();
+}
+} else {
+loadScript();
+}
+function loadScript() {
+var script = document.createElement('script');
+script.async = true;
+script.src = scriptURL;
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+script.onload = ShopifyBuyInit;
+}
+function ShopifyBuyInit() {
+var client = ShopifyBuy.buildClient({
+domain: 'genesisnode.myshopify.com',
+storefrontAccessToken: 'f1d12eb88a4b1d4f721c4d1b6ef5a7ab',
+});
+ShopifyBuy.UI.onReady(client).then(function (ui) {
+ui.createComponent('product', {
+id: '1582447231012',
+node: document.getElementById('product-component-1568175563611'),
+moneyFormat: '%24%7B%7Bamount%7D%7D',
+options: {
+"product": {
+"styles": {
+"product": {
+"@media (min-width: 601px)": {
+  "max-width": "calc(25% - 20px)",
+  "margin-left": "20px",
+  "margin-bottom": "50px"
+}
+},
+"title": {
+"font-weight": "normal"
+},
+"button": {
+"color": "#fdfeff",
+":hover": {
+  "color": "#fdfeff",
+  "background-color": "#006fe6"
+},
+"background-color": "#007bff",
+":focus": {
+  "background-color": "#006fe6"
+},
+"padding-left": "45px",
+"padding-right": "45px"
+}
+},
+"contents": {
+"img": false,
+"title": false,
+"price": false
+},
+"width": "280px",
+"text": {
+"button": "Add to cart"
+}
+},
+"productSet": {
+"styles": {
+"products": {
+"@media (min-width: 601px)": {
+  "margin-left": "-20px"
+}
+}
+}
+},
+"modalProduct": {
+"contents": {
+"img": false,
+"imgWithCarousel": true,
+"button": false,
+"buttonWithQuantity": true
+},
+"styles": {
+"product": {
+"@media (min-width: 601px)": {
+  "max-width": "100%",
+  "margin-left": "0px",
+  "margin-bottom": "0px"
+}
+},
+"button": {
+"color": "#fdfeff",
+":hover": {
+  "color": "#fdfeff",
+  "background-color": "#006fe6"
+},
+"background-color": "#007bff",
+":focus": {
+  "background-color": "#006fe6"
+},
+"padding-left": "45px",
+"padding-right": "45px"
+},
+"title": {
+"font-weight": "normal"
+}
+},
+"text": {
+"button": "Add to cart"
+}
+},
+"cart": {
+"styles": {
+"button": {
+"color": "#fdfeff",
+":hover": {
+  "color": "#fdfeff",
+  "background-color": "#006fe6"
+},
+"background-color": "#007bff",
+":focus": {
+  "background-color": "#006fe6"
+}
+}
+},
+"text": {
+"total": "Subtotal",
+"notice": "Bitcoin on-chain and lightning accepted through OpenNode.",
+"button": "Checkout"
+}
+},
+"toggle": {
+"styles": {
+"toggle": {
+"background-color": "#007bff",
+":hover": {
+  "background-color": "#006fe6"
+},
+":focus": {
+  "background-color": "#006fe6"
+}
+},
+"count": {
+"color": "#fdfeff",
+":hover": {
+  "color": "#fdfeff"
+}
+},
+"iconPath": {
+"fill": "#fdfeff"
+}
+}
+}
+},
+});
+});
+}
+})();
+/*]]>*/
+</script>
